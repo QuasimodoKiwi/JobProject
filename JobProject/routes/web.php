@@ -15,7 +15,7 @@ use App\Http\Controllers\JobsControllerAPI;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('application_form');
 });
 
 
