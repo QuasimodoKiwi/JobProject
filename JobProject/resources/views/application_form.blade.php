@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="{{ route('store_application') }}" method="post">
+    <form action="{{ url('api/application') }}" method="post">
         @csrf
         <div>
             <label for="applicationID">Application ID:</label>
@@ -40,7 +40,7 @@
         </div>
         <div>
             <label for="yearsofexperience">Years of Experience:</label>
-            <input type="number" id="yearsofexperience" name="yearsofexperince" required>
+            <input type="number" id="yearsofexperience" name="yearsofexperience" required>
         </div>
         <div>
             <label for="other">Other:</label>

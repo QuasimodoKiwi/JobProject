@@ -10,5 +10,7 @@ class secondpage extends Controller
     {
         return view('application_form');
     }
+
+
 }
 

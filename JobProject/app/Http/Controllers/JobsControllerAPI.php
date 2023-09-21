@@ -23,12 +23,13 @@ class JobsControllerAPI extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'applicationID'=>'required',
             'firstname' => 'required',
             'lastname' => 'required',
             'email' => 'required',
             'address' => 'required',
             'education' => 'required',
-            'yearsofexperince' => 'required',
+            'yearsofexperience' => 'required',
             'other' => 'required'
 
 
@@ -36,7 +37,10 @@ class JobsControllerAPI extends Controller
 
         $job = $request->all();
         Jobs::create($job);
-        return $job;
+       
+        $employer = Jobs::all();
+
+        return $employer;
     }
 
     /**
