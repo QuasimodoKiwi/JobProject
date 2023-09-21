@@ -38,9 +38,8 @@ class JobsControllerAPI extends Controller
         $job = $request->all();
         Jobs::create($job);
        
-        $employer = Jobs::all();
 
-        return $employer;
+        return redirect('/');
     }
 
     /**
@@ -48,11 +47,8 @@ class JobsControllerAPI extends Controller
      */
     public function show(string $id)
     {
-        /*
-        $product = Jobs::all();
-        return $product;
-        */
-        return view('customerpage');
+        $job = Jobs::all();
+        return view('secondPage', $job);
     }
 
     /**
