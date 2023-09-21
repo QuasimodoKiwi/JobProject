@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,31 +33,6 @@
 
     </table>
 </body>
-</html>
+</html> --}}
 
-@php
-use Illuminate\Http\request; //CHANGE AS NEEDED
-use app\models\application; //CHANGE AS NEEDED
 
-public function store(Request $request)
-{
-    $validatedData = $request->validate([
-        'applicationID' => 'required',
-        'firstname' => 'required',
-        'lastname' => 'required',
-        'email' => 'required|email',
-        'address' => 'required',
-        'education' => 'required',
-        'yearsofexperience' => 'required|numeric',
-        'other' => 'nullable',
-    ]);
-
-    Application::create($validatedData);
-
-    return redirect('/application_form')->with('success', 'Application submitted successfully');
-
-Application::create($validatedData);
-
-    return redirect('/application_form')->with('success', 'Application submitted successfully');
-}
-@endphp

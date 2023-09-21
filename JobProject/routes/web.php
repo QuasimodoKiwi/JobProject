@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route; //CHANGE AS NEEDED !!!
 use App\Http\Controllers\JobsControllerAPI;
+use App\Http\Controllers\secondpage;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,7 @@ Route::get('/', function () {
     return view('application_form');
 });
 
-Route::get('/application_form',
- 'secondpage@index');
+Route::get('/application_form', [secondpage::class, 'store']);
 
  Route::post('/store_application',
  'secondpage@store')
