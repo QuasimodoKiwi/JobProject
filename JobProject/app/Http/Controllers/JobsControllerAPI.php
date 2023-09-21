@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Jobs;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class JobsControllerAPI extends Controller
 {
@@ -11,7 +13,8 @@ class JobsControllerAPI extends Controller
      */
     public function index()
     {
-        //
+        $employer = Jobs::all();
+        return view('customerpage', ['emp' => $employer]);
     }
 
     /**
@@ -41,6 +44,10 @@ class JobsControllerAPI extends Controller
      */
     public function show(string $id)
     {
+        /*
+        $product = Jobs::all();
+        return $product;
+        */
         return view('customerpage');
     }
 
