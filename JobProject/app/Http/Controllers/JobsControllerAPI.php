@@ -19,7 +19,21 @@ class JobsControllerAPI extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'email' => 'required',
+            'address' => 'required',
+            'education' => 'required',
+            'yearsofexperince' => 'required',
+            'other' => 'required'
+
+
+        ]);
+
+        $job = $request->all();
+        Jobs::create($job);
+        return $job;
     }
 
     /**
@@ -27,7 +41,7 @@ class JobsControllerAPI extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('customerpage');
     }
 
     /**
