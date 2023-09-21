@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route; //CHANGE AS NEEDED !!!
 use App\Http\Controllers\JobsControllerAPI;
 use App\Http\Controllers\secondpage;
+use App\Models\Jobs;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +26,13 @@ Route::get('/application_form', [secondpage::class, 'store']);
  'secondpage@store')
  ->name('store_application');
 
-
-
 Route::get('/customerpage', function () {
     return view('customerpage');
+});
+
+Route::get('/secondPage', function(){
+    $data = Jobs::all();
+    return view('secondPage', ['data' => $data]);
 });
 
 

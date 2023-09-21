@@ -1,4 +1,4 @@
-{{-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,9 +30,18 @@
             <th>Years of Experience</th>
             <th>Other</th>
         </tr>
-
+        @foreach($data as $key => $value)
+        <tr>
+            <th>{{ $value->applicationID}}</th>
+            <th>{{ $value->firstname}}</th>
+            <th>{{ $value->lastname}}</th>
+            <th>{{ $value->email}}</th>
+            <th>{{ $value->address}}</th>
+            <th>{{ $value->education}}</th>
+            <th>{{ $value->yearsofexperience}}</th>
+            <th>{{ $value->other}}</th>
+        </tr>
+        @endforeach
     </table>
 </body>
-</html> --}}
-
-
+</html>
