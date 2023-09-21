@@ -1,6 +1,8 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+
 
 </head>
 
@@ -38,7 +40,7 @@
     </form>
 
 
-    <form action={{ url('/customerpage') }} method="get">
+    <form action={{ url('api/application') }} method="get">
         <button> Show all products!</button>
     </form>
 

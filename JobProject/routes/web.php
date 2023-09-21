@@ -32,7 +32,5 @@ Route::get('/customerpage', function () {
 });
 
 
-/*
-Route::get('/show', [JobsControllerAPI::class, 'customerpage']);
-*/
 
+Route::get('/show', [JobsControllerAPI::class, 'customerpage']);
