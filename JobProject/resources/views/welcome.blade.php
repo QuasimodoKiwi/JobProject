@@ -9,7 +9,7 @@
 
 <body>
 
-    <form action={{ url('/') }} method="post">
+    <form action={{ url('api/application') }} method="post">
         @csrf
 
 
@@ -29,7 +29,7 @@
         <input name="education">
 
         <label>years of experince</label>
-        <input name="yearsofexperince">
+        <input name="yearsofexperience">
 
         <label>other</label>
         <input name="other">
