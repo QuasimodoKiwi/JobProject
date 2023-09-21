@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('address');
             $table->string('education');
             $table->integer('yearsofexperience');
-            $table->string('other'); 
+            $table->string('other');
         });
     }
 
