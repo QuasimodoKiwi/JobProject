@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\JobsControllerAPI;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/customerpage', function () {
+    return view('customerpage');
+});
+
+
+/*
+Route::get('/show', [JobsControllerAPI::class, 'customerpage']);
+*/
