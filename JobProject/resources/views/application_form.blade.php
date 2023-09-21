@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="{{ route('') }}" method="post">
+    <form action="{{ route('store_application') }}" method="post">
         @csrf
         <div>
             <label for="applicationID">Application ID:</label>

@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route; //CHANGE AS NEEDED !!!
 use App\Http\Controllers\JobsControllerAPI;
 
 /*
@@ -17,6 +17,14 @@ use App\Http\Controllers\JobsControllerAPI;
 Route::get('/', function () {
     return view('application_form');
 });
+
+Route::get('/application_form',
+ 'secondpage@index');
+
+ Route::post('/store_application',
+ 'secondpage@store')
+ ->name('store_application');
+
 
 
 Route::get('/customerpage', function () {
