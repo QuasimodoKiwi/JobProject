@@ -3,8 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobsControllerAPI;
 
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +24,5 @@ Route::get('/customerpage', function () {
 });
 
 
-/*
+
 Route::get('/show', [JobsControllerAPI::class, 'customerpage']);
-*/

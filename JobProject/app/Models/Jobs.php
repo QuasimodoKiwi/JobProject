@@ -15,7 +15,8 @@ class Jobs extends Model
         'email',
         'address',
         'education',
-        'yearsofexperience',
-        'other'
+        'yearsofexperince',
+        'other',
+
     ];
 }

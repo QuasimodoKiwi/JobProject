@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\JobsControllerAPI;
+use App\Http\Controllers\JobsControllerAPI;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource("/application", JobsControllerAPI::class);
+Route::resource("application", JobsControllerAPI::class);
