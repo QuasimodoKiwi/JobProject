@@ -29,5 +29,4 @@ Route::get('/secondPage', function () {
     $data = Jobs::all();
     return view('secondPage', ['data' => $data]);
 });
-
 Route::get('/show', [JobsControllerAPI::class, 'customerpage']);

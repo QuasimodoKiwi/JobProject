@@ -46,23 +46,19 @@
             <label for="other">Other:</label>
             <textarea id="other" name="other" rows="4" cols="50"></textarea>
         </div>
-        <form action="{{url('/')}}" method="get">
-            <button type="submit" onclick="showAlert()">Submit Application</button>
-        </form>
+        <button type="submit" onclick="showAlert()">Submit Application</button>
         <form action={{ url('/secondPage') }} method="get">
             <button> Show all applicants!</button>
         </form>
     </form>
     <form action="{{ url('api/application') }}" method="get">
         <button>Show all products!</button>
-    </form>
-    
+    </form>    
     <script>
         function showAlert() {
             alert("Application submitted successfully");
         }
     </script>
-    
 </body>
 
 </html>
