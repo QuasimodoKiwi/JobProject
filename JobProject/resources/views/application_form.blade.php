@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Form</title>
 </head>
+
 <body>
     <form action="{{ route('store_application') }}" method="post">
         @csrf
@@ -37,7 +40,7 @@
         </div>
         <div>
             <label for="yearsofexperience">Years of Experience:</label>
-            <input type="number" id="yearsofexperience" name="yearsofexperience" required>
+            <input type="number" id="yearsofexperience" name="yearsofexperince" required>
         </div>
         <div>
             <label for="other">Other:</label>
@@ -46,4 +49,5 @@
         <button type="submit">Submit Application</button>
     </form>
 </body>
+
 </html>
