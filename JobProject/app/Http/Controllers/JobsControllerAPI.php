@@ -13,8 +13,7 @@ class JobsControllerAPI extends Controller
      */
     public function index()
     {
-        $employer = Jobs::all();
-        return view('customerpage', ['emp' => $employer]);
+        return view('/');
     }
 
     /**
@@ -38,9 +37,8 @@ class JobsControllerAPI extends Controller
         $job = $request->all();
         Jobs::create($job);
        
-        $employer = Jobs::all();
 
-        return $employer;
+        return redirect('/');
     }
 
     /**

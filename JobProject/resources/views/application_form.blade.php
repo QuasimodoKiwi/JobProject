@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="{{ url('api/application') }}" method="post">
+    <form action="{{ url('/') }}" method="post">
         @csrf
         <div>
             <label for="applicationID">Application ID:</label>
@@ -46,10 +46,18 @@
             <label for="other">Other:</label>
             <textarea id="other" name="other" rows="4" cols="50"></textarea>
         </div>
-        <form action="{{url('/application_form')}}" method="get">
-            <button type="submit">Submit Application</button>
+        <form action="{{url('/')}}" method="get">
+            <button type="submit" onclick="showAlert()">Submit Application</button>
+        </form>
+        <form action={{ url('/secondPage') }} method="get">
+            <button> Show all applicants!</button>
         </form>
     </form>
+    <script>
+        function showAlert() {
+            alert("Application submitted successfully");
+        }
+    </script>
 </body>
 
 </html>

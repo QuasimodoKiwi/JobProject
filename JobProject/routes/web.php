@@ -25,3 +25,5 @@ Route::get('/secondPage', function () {
     $jobTable = DB::table('jobs')->get();
     return view('secondPage', ['jobTable' => $jobTable]);
 });
+
+Route::post('/', [JobsControllerAPI::class, 'store']);
