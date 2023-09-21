@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route; 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\JobsControllerAPI;
 use App\Http\Controllers\secondpage;
@@ -27,6 +27,5 @@ Route::get('/', function () {
 
 Route::get('/secondPage', function () {
     $data = Jobs::all();
-    return view('secondPage', ['data' => $data]);
+    return view('secondPage', ['emp' => $data]);
 });
-Route::get('/show', [JobsControllerAPI::class, 'customerpage']);

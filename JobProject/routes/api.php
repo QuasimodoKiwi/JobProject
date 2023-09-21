@@ -20,5 +20,3 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource("application", JobsControllerAPI::class);
-
-Route::resource('secondPage', JobsControllerAPI::class);
