@@ -53,11 +53,16 @@
             <button> Show all applicants!</button>
         </form>
     </form>
+    <form action="{{ url('api/application') }}" method="get">
+        <button>Show all products!</button>
+    </form>
+    
     <script>
         function showAlert() {
             alert("Application submitted successfully");
         }
     </script>
+    
 </body>
 
 </html>

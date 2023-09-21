@@ -30,21 +30,19 @@
             <th>Years of Experience</th>
             <th>Other</th>
         </tr>
-
-        @foreach ($jobTable as $key => $data)
+        @foreach($emp as $key => $value)
         <tr>
-            <th>{{$data->applicationID}}</th>
-            <th>{{$data->firstname}}</th>
-            <th>{{$data->lastname}}</th>
-            <th>{{$data->email}}</th>
-            <th>{{$data->address}}</th>
-            <th>{{$data->education}}</th>
-            <th>{{$data->yearsofexperience}}</th>
-            <th>{{$data->other}}</th>
-    @endforeach
+            <th>{{ $value->applicationID}}</th>
+            <th>{{ $value->firstname}}</th>
+            <th>{{ $value->lastname}}</th>
+            <th>{{ $value->email}}</th>
+            <th>{{ $value->address}}</th>
+            <th>{{ $value->education}}</th>
+            <th>{{ $value->yearsofexperience}}</th>
+            <th>{{ $value->other}}</th>
+        </tr>
+        @endforeach
     </table>
     
 </body>
 </html>
-
-

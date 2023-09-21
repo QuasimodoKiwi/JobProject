@@ -13,7 +13,8 @@ class JobsControllerAPI extends Controller
      */
     public function index()
     {
-        return view('/');
+        $employer = Jobs::all();
+        return view('secondPage', ['emp' => $employer]);
     }
 
     /**
