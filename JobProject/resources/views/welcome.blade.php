@@ -9,7 +9,7 @@
 
 <body>
 
-    <form action={{ url('api/application') }} method="post">
+    <form action={{ url('/') }} method="post">
         @csrf
 
 
