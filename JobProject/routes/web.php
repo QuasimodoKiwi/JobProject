@@ -26,15 +26,9 @@ Route::get('/application_form', [secondpage::class, 'store']);
  'secondpage@store')
  ->name('store_application');
 
-Route::get('/customerpage', function () {
-    return view('customerpage');
-});
-
-Route::get('/secondPage', function(){
+Route::get('/secondPage', function () {
     $data = Jobs::all();
     return view('secondPage', ['data' => $data]);
 });
-
-
 
 Route::get('/show', [JobsControllerAPI::class, 'customerpage']);

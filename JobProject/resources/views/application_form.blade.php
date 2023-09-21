@@ -48,6 +48,9 @@
         </div>
         <button type="submit">Submit Application</button>
     </form>
+    <form action="{{ url('api/application') }}" method="get">
+        <button>Show all products!</button>
+    </form>
 </body>
 
 </html>

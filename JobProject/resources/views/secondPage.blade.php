@@ -30,7 +30,7 @@
             <th>Years of Experience</th>
             <th>Other</th>
         </tr>
-        @foreach($data as $key => $value)
+        @foreach($emp as $key => $value)
         <tr>
             <th>{{ $value->applicationID}}</th>
             <th>{{ $value->firstname}}</th>
