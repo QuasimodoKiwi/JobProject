@@ -26,6 +26,6 @@ Route::get('/', function () {
  ->name('store_application');
 
 Route::get('/secondPage', function () {
-    $data = Jobs::all();
-    return view('secondPage', ['emp' => $data]);
+    $emp = Jobs::all();
+    return view('secondPage', ['emp' => $emp]);
 });
