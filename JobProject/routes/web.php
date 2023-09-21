@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route; //CHANGE AS NEEDED !!!
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/application_form',
+ 'secondpage@index');
+
+ Route::post('/store_application',
+ 'secondpage@store')
+ ->name('store_application');

@@ -15,7 +15,7 @@
         th{
             padding: 5px;
         }
-        
+
         </style>
 </head>
 <body>
@@ -30,7 +30,34 @@
             <th>Years of Experience</th>
             <th>Other</th>
         </tr>
-        
+
     </table>
 </body>
 </html>
+
+@php
+use Illuminate\Http\request; //CHANGE AS NEEDED
+use app\models\application; //CHANGE AS NEEDED
+
+public function store(Request $request)
+{
+    $validatedData = $request->validate([
+        'applicationID' => 'required',
+        'firstname' => 'required',
+        'lastname' => 'required',
+        'email' => 'required|email',
+        'address' => 'required',
+        'education' => 'required',
+        'yearsofexperience' => 'required|numeric',
+        'other' => 'nullable',
+    ]);
+
+    Application::create($validatedData);
+
+    return redirect('/application_form')->with('success', 'Application submitted successfully');
+
+Application::create($validatedData);
+
+    return redirect('/application_form')->with('success', 'Application submitted successfully');
+}
+@endphp
