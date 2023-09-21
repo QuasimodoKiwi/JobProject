@@ -48,6 +48,12 @@
         </div>
         <button type="submit">Submit Application</button>
     </form>
+
+    <form action="{{ url('api/application') }}" method="get">
+        <button>show all</button>
+    </form>
+
+
 </body>
 
 </html>

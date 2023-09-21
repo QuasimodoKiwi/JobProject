@@ -14,7 +14,7 @@ class JobsControllerAPI extends Controller
     public function index()
     {
         $employer = Jobs::all();
-        return view('customerpage', ['emp' => $employer]);
+        return view('secondPage', ['emp' => $employer]);
     }
 
     /**

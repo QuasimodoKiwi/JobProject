@@ -18,17 +18,21 @@ Route::get('/', function () {
     return view('application_form');
 });
 
-Route::get('/application_form',
- 'secondpage@index');
+Route::get(
+    '/application_form',
+    'secondpage@index'
+);
 
- Route::post('/store_application',
- 'secondpage@store')
- ->name('store_application');
+Route::post(
+    '/store_application',
+    'secondpage@store'
+)
+    ->name('store_application');
 
 
 
-Route::get('/customerpage', function () {
-    return view('customerpage');
+Route::get('/homepage', function () {
+    return view('secondPage');
 });
 
 
