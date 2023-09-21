@@ -14,6 +14,14 @@ return new class extends Migration
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->integer('applicationID');
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('email');
+            $table->string('address');
+            $table->string('education');
+            $table->integer('yearsofexperience');
+            $table->string('other'); 
         });
     }
 
