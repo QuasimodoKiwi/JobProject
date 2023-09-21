@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route; //CHANGE AS NEEDED !!!
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\JobsControllerAPI;
 use App\Http\Controllers\secondpage;
 
@@ -19,18 +20,8 @@ Route::get('/', function () {
     return view('application_form');
 });
 
-Route::get('/application_form', [secondpage::class, 'store']);
 
- Route::post('/store_application',
- 'secondpage@store')
- ->name('store_application');
-
-
-
-Route::get('/customerpage', function () {
-    return view('customerpage');
+Route::get('/secondPage', function () {
+    $jobTable = DB::table('jobs')->get();
+    return view('secondPage', ['jobTable' => $jobTable]);
 });
-
-
-
-Route::get('/show', [JobsControllerAPI::class, 'customerpage']);

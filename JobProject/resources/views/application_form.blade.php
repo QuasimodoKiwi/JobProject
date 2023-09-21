@@ -46,7 +46,9 @@
             <label for="other">Other:</label>
             <textarea id="other" name="other" rows="4" cols="50"></textarea>
         </div>
-        <button type="submit">Submit Application</button>
+        <form action="{{url('/application_form')}}" method="get">
+            <button type="submit">Submit Application</button>
+        </form>
     </form>
 </body>
 

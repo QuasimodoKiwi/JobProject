@@ -1,4 +1,4 @@
-{{-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -31,8 +31,20 @@
             <th>Other</th>
         </tr>
 
+        @foreach ($jobTable as $key => $data)
+        <tr>
+            <th>{{$data->applicationID}}</th>
+            <th>{{$data->firstname}}</th>
+            <th>{{$data->lastname}}</th>
+            <th>{{$data->email}}</th>
+            <th>{{$data->address}}</th>
+            <th>{{$data->education}}</th>
+            <th>{{$data->yearsofexperience}}</th>
+            <th>{{$data->other}}</th>
+    @endforeach
     </table>
+    
 </body>
-</html> --}}
+</html>
 
 

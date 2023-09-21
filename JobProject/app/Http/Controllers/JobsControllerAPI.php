@@ -48,11 +48,8 @@ class JobsControllerAPI extends Controller
      */
     public function show(string $id)
     {
-        /*
-        $product = Jobs::all();
-        return $product;
-        */
-        return view('customerpage');
+        $job = Jobs::all();
+        return view('secondPage', $job);
     }
 
     /**
