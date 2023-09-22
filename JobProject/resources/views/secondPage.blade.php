@@ -11,7 +11,7 @@
         }
         table{
             width: 100%;
-            margin-bottom: 20px;
+            /* margin-bottom: 20px; */
         }
         table, th, td {
             border:1px solid black;
@@ -29,14 +29,11 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
-        </tr>
-        <tr>
             <th>Address</th>
             <th>Education</th>
             <th>Years of Experience</th>
             <th>Other</th>
         </tr>
-    </table>
         @foreach($emp as $key => $value)
         <tr>
             <th>{{ $value->applicationID}}</th>
@@ -49,5 +46,6 @@
             <th>{{ $value->other}}</th>
         </tr>
         @endforeach
+    </table>
 </body>
 </html>
