@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <meta charset="UTF-8">
@@ -46,12 +45,8 @@
             <label for="other">Other:</label>
             <textarea id="other" name="other" rows="4" cols="50"></textarea>
         </div>
-        
         <button type="submit" onclick="showAlert()">Submit Application</button>
-
-    </form>
-
-    
+    </form>   
     <form action={{ url('api/application') }} method="get">
         <button> Show all applicants!</button>
     </form>
@@ -61,5 +56,4 @@
         }
     </script>
 </body>
-
 </html>

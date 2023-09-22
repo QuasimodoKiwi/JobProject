@@ -6,16 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Second Page</title>
     <style>
+        body {
+            background-color: steelblue;
+        }
         table{
             width: 100%;
+            margin-bottom: 20px;
         }
         table, th, td {
-          border:1px solid black;
+            border:1px solid black;
         }
         th{
-            padding: 5px;
+            color: white;
+            background-color: limegreen;
         }
-
         </style>
 </head>
 <body>
@@ -25,11 +29,14 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
+        </tr>
+        <tr>
             <th>Address</th>
             <th>Education</th>
             <th>Years of Experience</th>
             <th>Other</th>
         </tr>
+    </table>
         @foreach($emp as $key => $value)
         <tr>
             <th>{{ $value->applicationID}}</th>
@@ -42,7 +49,5 @@
             <th>{{ $value->other}}</th>
         </tr>
         @endforeach
-    </table>
-    
 </body>
 </html>
