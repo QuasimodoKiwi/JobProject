@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Jobs;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class JobsControllerAPI extends Controller
 {
@@ -11,7 +13,8 @@ class JobsControllerAPI extends Controller
      */
     public function index()
     {
-        //
+        $employer = Jobs::all();
+        return view('secondPage', ['emp' => $employer]);
     }
 
     /**
@@ -19,7 +22,24 @@ class JobsControllerAPI extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'applicationID'=>'required',
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'email' => 'required',
+            'address' => 'required',
+            'education' => 'required',
+            'yearsofexperience' => 'required',
+            'other' => 'required'
+
+
+        ]);
+
+        $job = $request->all();
+        Jobs::create($job);
+       
+
+        return redirect('/');
     }
 
     /**
@@ -27,7 +47,8 @@ class JobsControllerAPI extends Controller
      */
     public function show(string $id)
     {
-        //
+        $job = Jobs::all();
+        return view('secondPage', $job);
     }
 
     /**

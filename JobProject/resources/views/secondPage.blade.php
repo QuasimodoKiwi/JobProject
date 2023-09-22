@@ -37,5 +37,17 @@
             <th>Other</th>
         </tr>
     </table>
+        @foreach($emp as $key => $value)
+        <tr>
+            <th>{{ $value->applicationID}}</th>
+            <th>{{ $value->firstname}}</th>
+            <th>{{ $value->lastname}}</th>
+            <th>{{ $value->email}}</th>
+            <th>{{ $value->address}}</th>
+            <th>{{ $value->education}}</th>
+            <th>{{ $value->yearsofexperience}}</th>
+            <th>{{ $value->other}}</th>
+        </tr>
+        @endforeach
 </body>
 </html>

@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\JobsControllerAPI;
+use App\Http\Controllers\secondpage;
+use App\Models\Jobs;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +18,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('application_form');
+});
+
+ Route::post('/store_application',
+ 'secondpage@store')
+ ->name('store_application');
+
+Route::get('/secondPage', function () {
+    $emp = Jobs::all();
+    return view('secondPage', ['emp' => $emp]);
 });
